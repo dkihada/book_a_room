@@ -1,0 +1,29 @@
+{
+  "name": "front-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkihada/book_a_room.git"
+  },
+  "keywords": [
+    "hotel",
+    "room",
+    "rest",
+    "holiday"
+  ],
+  "author": "Denis Agureev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dkihada/book_a_room/issues"
+  },
+  "homepage": "https://github.com/dkihada/book_a_room#readme",
+  "devDependencies": {
+    "webpack": "^5.47.1",
+    "webpack-cli": "^4.7.2"
+  }
+}
