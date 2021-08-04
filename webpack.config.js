@@ -1,5 +1,6 @@
-const path = require('path'),
-      HTMLWebpackPlugin = require('html-webpack-plugin'),
+const path = require('path');
+
+const HTMLWebpackPlugin = require('html-webpack-plugin'),
       CopyPlugin = require('copy-webpack-plugin'),
       {CleanWebpackPlugin} = require('clean-webpack-plugin'),
       MiniCssExtractPlugin = require('mini-css-extract-plugin'),
@@ -26,7 +27,14 @@ const optimization = () => {
   return config
 }
 
-const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`
+const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`;
+const cssLoaders = extra => {
+  const loaders = [MiniCssExtractPlugin.loader, 'css-loader'];
+
+  if(extra) { loaders.push(extra) };
+
+  return loaders;
+};
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
@@ -64,11 +72,22 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
+        use: cssLoaders()
+      },
+      {
+        test: /\.less$/,
+        use: cssLoaders('less-loader')
+      },
+      {
+        test: /\.s[ac]ss$/,
+        use: cssLoaders('sass-loader')
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/,
-        use: ['file-loader']
+        type: 'asset/resource',
+        generator: {
+          filename: 'img/[name][ext]'
+        }
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
