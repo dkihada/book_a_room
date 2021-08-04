@@ -2,11 +2,12 @@
   "name": "front-end",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
-    "watch": "webpack --mode production --watch"
+    "dev": "cross-env NODE_ENV=development webpack --mode development",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "watch": "cross-env NODE_ENV=development webpack --mode production --watch",
+    "start": "cross-env NODE_ENV=development webpack serve --mode development --open"
   },
   "repository": {
     "type": "git",
@@ -25,12 +26,23 @@
   },
   "homepage": "https://github.com/dkihada/book_a_room#readme",
   "devDependencies": {
+    "@types/copy-webpack-plugin": "^8.0.1",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "copy-webpack-plugin": "^9.0.1",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.2.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.1.0",
+    "optimize-css-assets-webpack-plugin": "^6.0.1",
     "style-loader": "^3.2.1",
+    "terser-webpack-plugin": "^5.1.4",
+    "url-loader": "^4.1.1",
     "webpack": "^5.47.1",
-    "webpack-cli": "^4.7.2"
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   }
 }
