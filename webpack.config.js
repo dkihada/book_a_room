@@ -39,7 +39,10 @@ const cssLoaders = extra => {
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
-  entry: './js/index.js',
+  entry: [
+    '@babel/polyfill', 
+    './js/index.js'
+  ],
   output: {
     filename: filename('js'),
     path: path.resolve(__dirname, 'dist')
@@ -94,6 +97,16 @@ module.exports = {
         type: 'asset/resource',
         generator: {
           filename: 'fonts/[name][ext]'
+        }
+      },
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ['@babel/preset-env']
+          }
         }
       }
     ]

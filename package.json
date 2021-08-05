@@ -9,6 +9,7 @@
     "watch": "cross-env NODE_ENV=development webpack --mode production --watch",
     "start": "cross-env NODE_ENV=development webpack serve --mode development --open"
   },
+  "browserslist": "> 0.25%, not dead",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dkihada/book_a_room.git"
@@ -26,7 +27,10 @@
   },
   "homepage": "https://github.com/dkihada/book_a_room#readme",
   "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
     "@types/copy-webpack-plugin": "^8.0.1",
+    "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "copy-webpack-plugin": "^9.0.1",
     "cross-env": "^7.0.3",
@@ -47,6 +51,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "normalize.css": "^8.0.1"
   }
 }
