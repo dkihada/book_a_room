@@ -51,10 +51,8 @@ module.exports = {
   },
   plugins: [
     new HTMLWebpackPlugin({
-      template: './index.html',
-      minify: {
-        collapseWhitespace: isProd
-      }
+      template: `${path.resolve(__dirname, './src/layout/pages/ui.pug')}`,
+      filename: `ui.html`
     }),
     new CleanWebpackPlugin(),
     new CopyPlugin({
@@ -71,10 +69,18 @@ module.exports = {
   optimization: optimization(),
   devServer: {
     port: 8080,
+    contentBase: path.resolve(__dirname, 'dist'),
     hot: isDev
   },
   module: {
     rules: [
+      {
+        test: /\.pug$/,
+        loader: 'pug-loader',
+        options: {
+          pretty: isDev ? true : false
+        }
+      },
       {
         test: /\.css$/,
         use: cssLoaders()
