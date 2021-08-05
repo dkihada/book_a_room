@@ -39,10 +39,12 @@ const cssLoaders = extra => {
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
-  entry: [
+  entry: {
+    main: [
     '@babel/polyfill', 
     './js/index.js'
-  ],
+    ]
+  },
   output: {
     filename: filename('js'),
     path: path.resolve(__dirname, 'dist')
@@ -57,9 +59,9 @@ module.exports = {
     new CleanWebpackPlugin(),
     new CopyPlugin({
       patterns: [
-        { from: path.resolve(__dirname, "src/favicon"), to: path.resolve(__dirname, "dist/favicon") },
-        { from: path.resolve(__dirname, "src/icons"), to: path.resolve(__dirname, "dist/icons") },
-        { from: path.resolve(__dirname, "src/img"), to: path.resolve(__dirname, "dist/img") }
+        { from: path.resolve(__dirname, 'src/favicon'), to: path.resolve(__dirname, 'dist/favicon') },
+        { from: path.resolve(__dirname, 'src/icons'), to: path.resolve(__dirname, 'dist/icons') },
+        { from: path.resolve(__dirname, 'src/img'), to: path.resolve(__dirname, 'dist/img') }
       ]
     }),
     new MiniCssExtractPlugin({
@@ -103,9 +105,19 @@ module.exports = {
         test: /\.m?js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env']
+          }
+        }
+      },
+      {
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-typescript']
           }
         }
       }
