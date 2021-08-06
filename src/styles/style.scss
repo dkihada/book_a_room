@@ -1,0 +1,17 @@
+@import url('~normalize.css');
+@import url('./_fonts.scss');
+
+body {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  max-width: 1440px;
+  margin: 0 auto;
+  .logo {
+    padding: 29px;
+    width: 50px;
+    height: 50px;
+  }
+  .container {
+    margin: 33px auto;
+    max-width: 1220px;
+  }
+}
