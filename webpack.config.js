@@ -37,6 +37,7 @@ const cssLoaders = extra => {
 };
 
 module.exports = {
+  target: 'web',
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
   entry: {
@@ -51,8 +52,8 @@ module.exports = {
   },
   plugins: [
     new HTMLWebpackPlugin({
-      template: `${path.resolve(__dirname, './src/layout/pages/ui.pug')}`,
-      filename: `ui.html`
+      template: `${path.resolve(__dirname, './src/layout/pages/ui/color.pug')}`,
+      filename: `color.html`
     }),
     new CleanWebpackPlugin(),
     new CopyPlugin({
@@ -68,8 +69,8 @@ module.exports = {
   ],
   optimization: optimization(),
   devServer: {
+    index: 'color.html',
     port: 8080,
-    contentBase: path.resolve(__dirname, 'dist'),
     hot: isDev
   },
   module: {
