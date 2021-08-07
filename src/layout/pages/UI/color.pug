@@ -1,0 +1,34 @@
+extends ../../base.pug
+
+block body
+
+  include ./_variables/_variables-ui.pug
+  block colorNameUI
+
+  img.logo(src='./img/logo.svg')
+  .container
+    .color-block 
+      ul.block-color
+        each val in colorItems
+          li.block-color__item
+            div(style=val.bg).block-color__item-bg
+            div.block-color__item-text
+              span.block-color__item-text-name= val.name
+              span.block-color__item-text-hash= val.nameHash
+
+      ul.block-font
+        li.block-font__item
+          .block-font__item-log.block-font__item-log-h1 H1 
+          .block-font__item-name.block-font__item-name-h1 This one is the sub-section or widget title
+
+        li.block-font__item
+          .block-font__item-log.block-font__item-log-h2 H2 
+          .block-font__item-name.block-font__item-name-h2 Next one is the item title inside widgets
+
+        li.block-font__item
+          .block-font__item-log.block-font__item-log-h3 H3 
+          .block-font__item-name.block-font__item-name-h3 This is a label or CTA text
+
+        li.block-font__item
+          .block-font__item-log.block-font__item-log-body Body 
+          .block-font__item-name.block-font__item-name-body This is the body text which is used for most of the design, like paragraphs, lists, etc.
