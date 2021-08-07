@@ -1,0 +1,27 @@
+@mixin DarkShade100 {
+  background: #1F2041;
+}
+
+@mixin DarkShade75 {
+  background: rgba(31, 32, 65, 0.75);
+}
+
+@mixin DarkShade50 {
+  background: rgba(31, 32, 65, 0.5);
+}
+
+@mixin DarkShade25 {
+  background: rgba(31, 32, 65, 0.25);
+}
+
+@mixin DarkShade5 {
+  background: rgba(31, 32, 65, 0.05);
+}
+
+@mixin Purple {
+  background: #BC9CFF;
+}
+
+@mixin Green {
+  background: #6FCF97;
+}
