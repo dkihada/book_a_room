@@ -1,2 +1,2 @@
 import '../styles/style.scss';
-import '../styles/ui/_color.scss';
+import '../styles/ui/color-page.scss';

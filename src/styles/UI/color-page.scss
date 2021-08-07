@@ -1,0 +1,30 @@
+.block-color {
+  width: 50%;
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 50%;
+    list-style-type: none;
+    &-bg {
+      display: inline-block;
+      border-radius: 6px;
+      background-color: #1F2041;
+      width: 70px;
+      height: 70px;
+    }
+    &-text {
+      display: flex;
+      flex-direction: column;
+      margin-left: 39px;
+      font-size: 20px;
+      line-height: 28px;
+      &-name {
+        font-weight: 700;
+      }
+      &-hash {
+        font-weight: 400;
+      }
+    }
+  }
+}
