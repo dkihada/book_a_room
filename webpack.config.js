@@ -42,8 +42,7 @@ module.exports = {
   mode: 'development',
   entry: {
     main: [
-    '@babel/polyfill', 
-    './js/index.js'
+    '@babel/polyfill', './js/index.js'
     ]
   },
   output: {
@@ -53,7 +52,11 @@ module.exports = {
   plugins: [
     new HTMLWebpackPlugin({
       template: `${path.resolve(__dirname, './src/layout/pages/ui/color.pug')}`,
-      filename: `color.html`
+      filename: `ui/color.html`
+    }),
+    new HTMLWebpackPlugin({
+      template: `${path.resolve(__dirname, './src/layout/pages/ui/form-elements.pug')}`,
+      filename: `ui/form-elements.html`
     }),
     new CleanWebpackPlugin(),
     new CopyPlugin({
@@ -69,7 +72,7 @@ module.exports = {
   ],
   optimization: optimization(),
   devServer: {
-    index: 'color.html',
+    index: 'ui/color.html',
     port: 8080,
     hot: isDev
   },
