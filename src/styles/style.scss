@@ -2,13 +2,19 @@
 @import url('./_fonts.scss');
 
 body {
-  font-family: 'Montserrat-Regular', 'Arial', sans-serif;
+  font-family: 'Montserrat-Medium', 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 1.5rem;
+  color: rgba(31, 32, 65, 0.75);
   max-width: 1440px;
   margin: 0 auto;
   .logo {
-    padding: 29px;
-    width: 50px;
-    height: 50px;
+
+    img {
+      padding: 29px 29px 13px;
+      width: 50px;
+      height: 50px;
+    }
   }
   .container {
     margin: 33px auto;

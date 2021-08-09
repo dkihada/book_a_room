@@ -15,3 +15,32 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
+@font-face {
+	font-family: 'Montserrat-Medium';
+	src: url('../fonts/Montserrat-Medium.eot');
+	src: url('../fonts/Montserrat-Medium.woff') format('woff'), 
+       url('../fonts/Montserrat-Medium.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.h1 {
+  font-family: 'Montserrat-Bold', 'Arial', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.85rem;
+}
+.h2 {
+  font-family: 'Montserrat-Bold', 'Arial', sans-serif;
+  font-size: 1.19rem;
+  font-weight: 700;
+  line-height: 1.6rem;
+}
+.h3 {
+  font-family: 'Montserrat-Bold', 'Arial', sans-serif;
+  font-size: 12px;
+  line-height: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}

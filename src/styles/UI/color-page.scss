@@ -6,13 +6,12 @@
 }
 
 .block-color {
-  margin-top: 0;
-  width: 50%;
+
   &__item {
     display: flex;
     align-items: center;
+    min-width: 570px;
     margin-bottom: 20px;
-    width: 50%;
     list-style-type: none;
     &-bg {
       display: inline-block;
@@ -28,73 +27,60 @@
       font-size: 20px;
       line-height: 28px;
       &-name {
-        font-family: 'Montserrat-Bold', sans-serif;
-        word-spacing: -3px;
         font-weight: 700;
       }
       &-hash {
-        letter-spacing: -0.5px;
-        font-weight: 400;
+        margin-top: 2px;
+        letter-spacing: 0.2px;
+        font-size: 1.19rem;
+        font-family: 'Montserrat-Regular', 'Arial', sans-serif;
       }
     }
   }
 }
 
 .block-font {
-  width: 50%;
-  margin-top: 1px;
+
   &__item {
     display: flex;
     margin-left: 86px;
-    margin-bottom: 52px;
+    margin-bottom: 50px;
     list-style-type: none;
     &-log {
       display: flex;
       justify-content: flex-end;
       width: 37px;
       &-h1 {
+        font-family: 'Montserrat-Regular', 'Arial', sans-serif;
         text-transform: uppercase;
         font-size: 1.5rem;
+        font-weight: 700;
         color: rgba(31, 32, 65, 0.25);
       }
       &-h2 {
+        font-family: 'Montserrat-Regular', 'Arial', sans-serif;
         text-transform: uppercase;
-        font-size: 19px;
+        font-size: 1.19rem;
+        line-height: 1.5rem;
+        font-weight: 700;
         color: rgba(31, 32, 65, 0.25);
       }
       &-h3 {
-        font-size: 12px;
+        font-family: 'Montserrat-Regular', 'Arial', sans-serif;
+        font-size: 0.75rem;
         text-transform: uppercase;
+        font-weight: 700;
         color: rgba(31, 32, 65, 0.25);
       }
       &-body {
-        font-size: 14px;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
         color: rgba(31, 32, 65, 0.25);
       }
     }
-    &-name {
-      font-family: 'Montserrat-Bold', sans-serif;
-      width: 369px;
+    &-descr {
+      width: 370px;
       margin-left: 30px;
-      &-h1 {
-        font-size: 1.5rem;
-        line-height: 1.8rem;
-      }
-      &-h2 {
-        font-size: 19px;
-        line-height: 1.5rem;
-      }
-      &-h3 {
-        font-size: 12px;
-        text-transform: uppercase;
-      }
-      &-body {
-        width: 302px;
-        font-family: 'Montserrat-Regular', sans-serif;
-        font-size: 14px;
-        line-height: 20px;
-        color: rgba(31, 32, 65, 0.75);
-      }
     }
 
   }
