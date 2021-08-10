@@ -14,6 +14,9 @@
     color: rgba(31, 32, 65, 0.5);
   }
 }
+
+// Элемент text-field
+
 .text-field {
   &__input {
     width: 320px;
@@ -30,6 +33,12 @@
     }
     &::-moz-placeholder {
       color: rgba(31, 32, 65, 0.25);
+     }
+     &:hover {
+      border: 1px solid rgba(31, 32, 65, 0.5);
+     }
+     &:focus {
+      outline-color: rgba(31, 32, 65, 0.5);
      }
   }
 }
