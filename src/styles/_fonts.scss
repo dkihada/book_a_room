@@ -39,8 +39,15 @@
 }
 .h3 {
   font-family: 'Montserrat-Bold', 'Arial', sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 0.9rem;
   font-weight: 700;
+  text-transform: uppercase;
+}
+
+.h3-regular {
+  font-family: 'Montserrat-Regular', 'Arial', sans-serif;
+  font-size: 0.75rem;
+  line-height: 0.9rem;
   text-transform: uppercase;
 }

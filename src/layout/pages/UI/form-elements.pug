@@ -1,4 +1,21 @@
 extends ../../base.pug
 
 block body
-  h1 Im the best
+  .logo
+    img(src='./img/logo.svg')
+
+  .container
+    .col-3 
+      .name-block
+        span.name-block__name.h3 Text Field
+        span.name-block__state.h3-regular Default
+      
+      .text-field 
+        input(type="Email" placeholder="Email").text-field__input
+
+      .name-block
+        span.name-block__name.h3 Text Field
+        span.name-block__state.h3-regular Hover / Focus
+      
+      .text-field 
+        input(type="Email" placeholder="This is pretty awesome").text-field__input

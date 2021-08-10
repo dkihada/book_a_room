@@ -72,7 +72,7 @@ module.exports = {
   ],
   optimization: optimization(),
   devServer: {
-    index: 'ui/color.html',
+    index: 'ui/form-elements.html',
     port: 8080,
     hot: isDev
   },
