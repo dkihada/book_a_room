@@ -27,7 +27,7 @@ block body
       .name-block
         span.name-block__name.h3 Dropdown
 
-      .dropdown 
+      .dropdown
         .dropdown__select
           .dropdown__option Сколько гостей
           .dropdown__arrow
@@ -39,5 +39,27 @@ block body
       .name-block
         span.name-block__name.h3 masked text field
 
-      .text-field 
-        input(maxlength="10" type="text" placeholder="ДД.ММ.ГГГГ" ).text-field__input.date
+      .text-field
+        input(maxlength="10" type="text" placeholder="ДД.ММ.ГГГГ" ).text-field__input
+
+         //- Date Dropdown
+
+      .dropdown.dropdown-date
+
+        .dropdown__item 
+          .name-block
+            span.name-block__name.h3 date Dropdown
+          .dropdown__select.date
+            .dropdown__option ДД.ММ.ГГГГ
+            .dropdown__arrow
+          .dropdown__list.date
+            .dropdown__list-item 
+
+        .dropdown__item 
+          .name-block
+            span.name-block__name.h3 date Dropdown
+          .dropdown__select.date
+            .dropdown__option ДД.ММ.ГГГГ
+            .dropdown__arrow
+          .dropdown__list.date
+            .dropdown__list-item

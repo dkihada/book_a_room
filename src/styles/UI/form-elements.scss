@@ -59,6 +59,7 @@
     box-sizing: border-box;
     border-radius: 4px;
     letter-spacing: -0.3px;
+    cursor: pointer;
   }
   &__arrow {
     position: absolute;
@@ -70,5 +71,16 @@
     border-right: 2px solid rgba(31, 32, 65, 0.5);
     margin-right: 60px;
     transform: rotate(135deg);
+  }
+}
+.dropdown-date {
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+  .date {
+    width: 150px;
+  }
+  .name-block {
+    width: 150px;
   }
 }
