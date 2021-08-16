@@ -40,7 +40,7 @@ block body
         span.name-block__name.h3 masked text field
 
       .text-field
-        input(maxlength="10" type="text" placeholder="ДД.ММ.ГГГГ" ).text-field__input
+        input(style="margin-bottom: 44px;" maxlength="10" type="text" placeholder="ДД.ММ.ГГГГ" ).text-field__input
 
          //- Date Dropdown
 
@@ -63,3 +63,12 @@ block body
             .dropdown__arrow
           .dropdown__list.date
             .dropdown__list-item
+
+      .dropdown__item.filter-date
+        .name-block
+          span.name-block__name.h3 filter date dropdown
+        .dropdown__select.date
+          .dropdown__option 19 авг - 23 авг
+          .dropdown__arrow
+        .dropdown__list.date
+          .dropdown__list-item
