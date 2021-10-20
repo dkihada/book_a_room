@@ -1,84 +1,78 @@
 extends ../../base.pug
 
 block body
-  .logo
-    img(src='./img/logo.svg')
+	.logo
+		img(src='./img/logo.svg')
 
-  .container
-    .col-3 
-      .name-block
-        span.name-block__name.h3 Text Field
-        span.name-block__state.h3-regular Default
+	.container
+		div
+			.name-block
+				span.name-block__name.h3 Text Field
+				span.name-block__state.h3-regular Default
 
-        //- Элемент text-field
-      
-      .text-field 
-        input(type="Email" placeholder="Email").text-field__input
+				//- Элемент text-field
+			
+			include ../../components/Input/Input.pug
 
-      .name-block
-        span.name-block__name.h3 Text Field
-        span.name-block__state.h3-regular Hover / Focus
-      
-      .text-field 
-        input(type="Email" placeholder="This is pretty awesome").text-field__input
+				//- Элемент dropdown
 
-        //- Элемент dropdown
+			.name-block
+				span.name-block__name.h3 Dropdown
 
-      .name-block
-        span.name-block__name.h3 Dropdown
+			.dropdown
+				.dropdown__select
+					.dropdown__option Сколько гостей
+					.dropdown__arrow
+				.dropdown__list 
+					.dropdown__list-item
 
-      .dropdown
-        .dropdown__select
-          .dropdown__option Сколько гостей
-          .dropdown__arrow
-        .dropdown__list 
-          .dropdown__list-item
+				//- Текст field
 
-        //- Текст field
+			.name-block
+				span.name-block__name.h3 masked text field
 
-      .name-block
-        span.name-block__name.h3 masked text field
+			.text-field
+				input(style="margin-bottom: 44px;" maxlength="10" type="text" placeholder="ДД.ММ.ГГГГ" ).text-field__input
 
-      .text-field
-        input(style="margin-bottom: 44px;" maxlength="10" type="text" placeholder="ДД.ММ.ГГГГ" ).text-field__input
+			.dropdown.dropdown-date
 
-         //- Date Dropdown
+				.dropdown__item 
+					.name-block
+						span.name-block__name.h3 date Dropdown
+					.dropdown__select.date
+						.dropdown__option ДД.ММ.ГГГГ
+						.dropdown__arrow
+					.dropdown__list.date
+						.dropdown__list-item 
 
-      .dropdown.dropdown-date
+				.dropdown__item 
+					.name-block
+						span.name-block__name.h3 date Dropdown
+					.dropdown__select.date
+						.dropdown__option ДД.ММ.ГГГГ
+						.dropdown__arrow
+					.dropdown__list.date
+						.dropdown__list-item
 
-        .dropdown__item 
-          .name-block
-            span.name-block__name.h3 date Dropdown
-          .dropdown__select.date
-            .dropdown__option ДД.ММ.ГГГГ
-            .dropdown__arrow
-          .dropdown__list.date
-            .dropdown__list-item 
+			.dropdown__item.filter-date
+				.name-block
+					span.name-block__name.h3 filter date dropdown
+				.dropdown__select.date
+					.dropdown__option 19 авг - 23 авг
+					.dropdown__arrow
+				.dropdown__list.date
+					.dropdown__list-item
 
-        .dropdown__item 
-          .name-block
-            span.name-block__name.h3 date Dropdown
-          .dropdown__select.date
-            .dropdown__option ДД.ММ.ГГГГ
-            .dropdown__arrow
-          .dropdown__list.date
-            .dropdown__list-item
+			.dropdown__item.subscription-field
+				.name-block
+					span.name-block__name.h3 subscription text field
+				.dropdown__select.date
+					.dropdown__option Email
+					.arrow-1
+						div
+				.dropdown__list.date
+					.dropdown__list-item
 
-      .dropdown__item.filter-date
-        .name-block
-          span.name-block__name.h3 filter date dropdown
-        .dropdown__select.date
-          .dropdown__option 19 авг - 23 авг
-          .dropdown__arrow
-        .dropdown__list.date
-          .dropdown__list-item
-
-      .dropdown__item.subscription-field
-        .name-block
-          span.name-block__name.h3 subscription text field
-        .dropdown__select.date
-          .dropdown__option Email
-          .arrow-1
-            div
-        .dropdown__list.date
-          .dropdown__list-item
+		div
+			.name-block
+				span.name-block__name.h3 Checkbox Buttons
